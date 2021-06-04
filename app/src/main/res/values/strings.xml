@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Note</string>
+    <string name="app_title">My Note</string>
+    <string name="main_button_text">Go</string>
+    <string name="about_button_text">About</string>
 </resources>

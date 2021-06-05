@@ -4,24 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoteCreatorFragment">
+    android:background="@color/backgroundPrimary"
+    tools:context=".ui.note.NoteCreatorFragment">
 
     <TextView
-        android:id="@+id/textview_second"
+        android:id="@+id/tvPageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+        android:layout_marginTop="36dp"
+        android:text="New Note"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/tv_page_title"/>
 
-    <Button
-        android:id="@+id/button_second"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:layout_marginVertical="60dp"
+        android:layout_marginLeft="30dp"
+        android:text="Title:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPageTitle"
+        style="@style/tv_content_title"/>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="250dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="50dp"
+        android:hint="Insert title here"
+        android:textColor="@color/colorPrimaryDark"
+        android:scaleX=".9"
+        android:scaleY=".9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvPageTitle" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="45dp"
+        android:layout_marginLeft="30dp"
+        android:text="Content:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        style="@style/tv_content_title" />
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:minWidth="350dp"
+        android:gravity="top|left"
+        android:lines="10"
+        android:minLines="5"
+        android:maxLines="20"
+        android:hint="Insert content here"
+        android:textColor="@color/colorPrimaryDark"
+        android:scaleX=".9"
+        android:scaleY=".9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Save"
+        android:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:backgroundTint="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

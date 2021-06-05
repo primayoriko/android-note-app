@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/drawable/ic_baseline_add_comment_24.xml" value="0.26666666666666666" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/activity_about.xml" value="0.264" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/activity_main.xml" value="0.2848731884057971" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/activity_note.xml" value="0.25052083333333336" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/content_note.xml" value="0.17831813576494426" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/fragment_first.xml" value="0.25052083333333336" />
+        <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/fragment_note_list.xml" value="0.2223731884057971" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/fragment_second.xml" value="0.25052083333333336" />
         <entry key="..\:/Riko/Projects/AndroidKotlin/MyNote/app/src/main/res/layout/item_note.xml" value="0.264" />
       </map>

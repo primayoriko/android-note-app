@@ -10,6 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNote">
+        <activity
+            android:name=".ui.note.NoteActivity"
+            android:exported="true"
+            android:label="@string/title_activity_note"
+            android:theme="@style/Theme.MyNote.NoActionBar" />
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +24,7 @@
         </activity>
         <activity
             android:name=".ui.about.AboutActivity"
-            android:label="@string/title_about">
-        </activity>
+            android:label="@string/title_about"></activity>
     </application>
 
 </manifest>

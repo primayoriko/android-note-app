@@ -9,6 +9,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityMainBinding
 import my.primayoriko.mynote.ui.about.AboutActivity
+import my.primayoriko.mynote.ui.note.NoteActivity
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -28,12 +29,13 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setHomeButtonEnabled(false)
 
         binding.btnMain.setOnClickListener {
-
+            val intent = Intent(view.context, NoteActivity::class.java)
+//            intent.putExtra("url", news.url)
+            view.context.startActivity(intent)
         }
 
         binding.btnAbout.setOnClickListener {
             val intent = Intent(view.context, AboutActivity::class.java)
-//            intent.putExtra("url", news.url)
             view.context.startActivity(intent)
         }
     }

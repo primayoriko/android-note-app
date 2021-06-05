@@ -7,5 +7,6 @@ data class Note(
     val title: String,
     val content: String,
     val createdTime: Date = Calendar.getInstance().time,
+    var updatedTime: Date = Calendar.getInstance().time,
     var isFavourite: Boolean = false
 )

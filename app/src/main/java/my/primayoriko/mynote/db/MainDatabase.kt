@@ -8,6 +8,6 @@ import my.primayoriko.mynote.domain.Note
     entities = [Note::class],
     version = 1
 )
-abstract class MainDatabase : RoomDatabase() {
+abstract class MainDatabase: RoomDatabase() {
 
 }

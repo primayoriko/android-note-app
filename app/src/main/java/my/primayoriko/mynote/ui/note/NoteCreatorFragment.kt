@@ -12,7 +12,7 @@ import my.primayoriko.mynote.databinding.FragmentNoteCreatorBinding
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class NoteCreatorFragment : Fragment() {
+class NoteCreatorFragment: Fragment() {
 
     private var _binding: FragmentNoteCreatorBinding? = null
 

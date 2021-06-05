@@ -10,7 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityNoteBinding
 
-class NoteActivity : AppCompatActivity() {
+class NoteActivity: AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityNoteBinding

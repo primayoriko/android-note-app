@@ -12,7 +12,7 @@ import my.primayoriko.mynote.ui.about.AboutActivity
 import my.primayoriko.mynote.ui.note.NoteActivity
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 

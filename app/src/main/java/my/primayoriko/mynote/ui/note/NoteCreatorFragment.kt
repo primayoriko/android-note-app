@@ -1,11 +1,14 @@
 package my.primayoriko.mynote.ui.note
 
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.FragmentNoteCreatorBinding
 
@@ -23,16 +26,47 @@ class NoteCreatorFragment: Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
         _binding = FragmentNoteCreatorBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.btnSave.setOnClickListener {
+            val dialog = MaterialAlertDialogBuilder(requireContext(), R.style.alert_dialog)
+                .setTitle("Save")
+                .setIcon(R.drawable.ic_baseline_save_alt_24)
+                .setMessage("Save the new note?")
+                .setPositiveButton("Yes") { _, _ ->
+                    // Save mechanism
+                    // ...
 
+                    val toast = Toast.makeText(context, "Note data saved successfully", Toast.LENGTH_LONG)
+
+                    toast.setGravity(Gravity.CENTER, 0, 0)
+                    toast.show()
+
+                    findNavController()
+                        .navigate(R.id.action_NoteCreatorFragment_to_NoteListFragment)
+                }
+                .setNegativeButton("No") { _, _ ->  }
+                .create()
+            dialog.show()
+        }
+        binding.btnCancel.setOnClickListener {
+            val dialog = MaterialAlertDialogBuilder(requireContext(), R.style.alert_dialog)
+                .setTitle("Cancel")
+                .setIcon(R.drawable.ic_baseline_cancel_24)
+                .setMessage("Are you sure to cancel the creation of new note?")
+                .setPositiveButton("Yes") { _, _ ->
+                    findNavController()
+                        .navigate(R.id.action_NoteCreatorFragment_to_NoteListFragment)
+                }
+                .setNegativeButton("No") { _, _ ->  }
+                .create()
+            dialog.show()
+        }
 //        binding.buttonSecond.setOnClickListener {
 //            findNavController().navigate(R.id.action_NoteCreatorFragment_to_NoteListFragment)
 //        }

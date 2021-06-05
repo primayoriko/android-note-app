@@ -115,8 +115,8 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01"
     kapt "androidx.hilt:hilt-compiler:1.0.0-alpha01"
 
-    implementation "androidx.support:palette-v7:26.0.0-alpha1"
-    implementation "androidx.support:design:23.4.0"
+//    implementation "androidx.support:palette-v7:26.0.0-alpha1"
+//    implementation "androidx.support:design:23.4.0"
 
     testImplementation "junit:junit:4.13.2"
     testImplementation "androidx.room:room-testing:2.3.0"

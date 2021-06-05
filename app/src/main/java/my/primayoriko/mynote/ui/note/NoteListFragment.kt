@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.FragmentNoteListBinding
 
@@ -23,18 +24,20 @@ class NoteListFragment: Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-
+    ): View {
         _binding = FragmentNoteListBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.fabAddNote.setOnClickListener {
+            findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
+        }
 //        binding.buttonFirst.setOnClickListener {
 //            findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
+//        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
 //        }
     }
 

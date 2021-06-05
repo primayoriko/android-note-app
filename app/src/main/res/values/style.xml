@@ -41,11 +41,21 @@
         <item name="android:background">@color/green</item>
         <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Small</item>
     </style>
+    <style name="btn_negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    <style name="btn_positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
     <!-- Other -->
     <style name="item_note">
         <item name="android:textSize">23sp</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:background">@color/backgroundPrimary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+    <style name="alert_dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/btn_positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/btn_negative</item>
     </style>
 </resources>

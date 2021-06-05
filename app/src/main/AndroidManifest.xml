@@ -19,7 +19,7 @@
         </activity>
         <activity
             android:name=".ui.about.AboutActivity"
-            android:label="@string/about_title_text">
+            android:label="@string/title_about">
         </activity>
     </application>
 

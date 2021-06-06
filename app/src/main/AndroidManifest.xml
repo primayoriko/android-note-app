@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyNote">
         <activity
+            android:name=".ui.note.NoteDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.note.NoteActivity"
             android:exported="true"
             android:label="@string/title_activity_note"
@@ -24,7 +27,7 @@
         </activity>
         <activity
             android:name=".ui.about.AboutActivity"
-            android:label="@string/title_about"></activity>
+            android:label="@string/title_about" />
     </application>
 
 </manifest>

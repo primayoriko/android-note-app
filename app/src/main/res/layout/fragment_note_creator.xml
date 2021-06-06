@@ -11,13 +11,13 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
         <TextView
             android:id="@+id/tvPageTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
             android:text="New Note"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -187,7 +187,8 @@
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
             android:backgroundTint="@color/red"
             android:text="Cancel"
             app:layout_constraintBottom_toBottomOf="parent"

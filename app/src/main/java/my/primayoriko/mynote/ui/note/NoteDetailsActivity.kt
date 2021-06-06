@@ -1,7 +1,9 @@
 package my.primayoriko.mynote.ui.note
 
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityNoteDetailsBinding
@@ -16,14 +18,18 @@ class NoteDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val formatter = SimpleDateFormat("E, dd MMM yyyy")
 
         note = intent.getParcelableExtra("note")!!
         binding = ActivityNoteDetailsBinding.inflate(layoutInflater)
 
         val view = binding.root
+        val formatter = SimpleDateFormat("E, dd MMM yyyy")
+        val colorDrawable =
+            ColorDrawable(ContextCompat.getColor(view.context, R.color.color_primary))
 
         setContentView(view)
+
+        supportActionBar?.setBackgroundDrawable(colorDrawable)
 
         binding.etTitle.setText(note.title)
         binding.etContent.setText(note.content)

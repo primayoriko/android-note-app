@@ -8,27 +8,31 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+        style="@style/tv_content_title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Title"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toStartOf="@+id/tvDate"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/tv_content_title"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
+        style="@style/tv_content"
+        android:layout_width="0dp"
+        android:maxWidth="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
+        android:gravity="center"
         android:text="Date"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/tv_content"/>
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/frameLayout"
@@ -41,7 +45,7 @@
             android:id="@+id/btnFavourite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subscribe"
+            android:text="Add Favourite"
             style="@style/btn_item_note"/>
 
     </LinearLayout>

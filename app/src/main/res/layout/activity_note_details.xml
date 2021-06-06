@@ -73,7 +73,8 @@
             android:textColor="@color/color_primary_dark"
             android:scaleX=".9"
             android:scaleY=".9"
-            android:clickable="false"
+            android:inputType="none"
+            android:editable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvCreatedTime"
             app:layout_constraintTop_toBottomOf="@+id/etTitle" />
@@ -100,7 +101,8 @@
             android:textColor="@color/color_primary_dark"
             android:scaleX=".9"
             android:scaleY=".9"
-            android:clickable="false"
+            android:inputType="none"
+            android:editable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvUpdatedTime"
             app:layout_constraintTop_toBottomOf="@+id/etCreatedTime" />

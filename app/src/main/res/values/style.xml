@@ -2,9 +2,9 @@
 <resources>
     <!-- Text -->
     <style name="tv_main_title">
-        <!--        <item name="android:textStyle"></item>-->
         <item name="android:gravity">center</item>
         <item name="android:textSize">35sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
         <item name="textAllCaps">true</item>
@@ -12,18 +12,21 @@
     <style name="tv_page_title">
         <item name="android:gravity">center</item>
         <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
     <style name="tv_page_sub_title">
         <item name="android:gravity">center</item>
         <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
     <style name="tv_content_title">
         <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
     </style>

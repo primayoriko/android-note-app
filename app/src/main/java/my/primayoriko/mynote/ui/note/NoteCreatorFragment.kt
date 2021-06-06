@@ -7,16 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.FragmentNoteCreatorBinding
+import my.primayoriko.mynote.domain.Note
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class NoteCreatorFragment: Fragment() {
 
+    private val viewModel: NoteViewModel by viewModels()
     private var _binding: FragmentNoteCreatorBinding? = null
 
     // This property is only valid between onCreateView and
@@ -39,14 +42,11 @@ class NoteCreatorFragment: Fragment() {
                 .setIcon(R.drawable.ic_baseline_save_alt_24)
                 .setMessage("Save the new note?")
                 .setPositiveButton("Yes") { _, _ ->
-                    // Save mechanism
-                    // ...
-
+                    saveNote()
                     val toast = Toast.makeText(context, "Note data saved successfully", Toast.LENGTH_LONG)
 
                     toast.setGravity(Gravity.CENTER, 0, 0)
                     toast.show()
-
                     findNavController()
                         .navigate(R.id.action_NoteCreatorFragment_to_NoteListFragment)
                 }
@@ -67,13 +67,20 @@ class NoteCreatorFragment: Fragment() {
                 .create()
             dialog.show()
         }
-//        binding.buttonSecond.setOnClickListener {
-//            findNavController().navigate(R.id.action_NoteCreatorFragment_to_NoteListFragment)
-//        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun saveNote() {
+        val title: String = binding.etTitle.text.toString()
+        val content: String = binding.etContent.text.toString()
+        val note = Note(
+            title,
+            content
+        )
+        viewModel.insert(note)
     }
 }

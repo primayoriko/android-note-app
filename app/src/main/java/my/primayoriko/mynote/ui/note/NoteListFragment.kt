@@ -1,5 +1,6 @@
 package my.primayoriko.mynote.ui.note
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,8 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
+import androidx.recyclerview.widget.GridLayoutManager
 import my.primayoriko.mynote.R
+import my.primayoriko.mynote.adapter.NoteAdapter
 import my.primayoriko.mynote.databinding.FragmentNoteListBinding
 
 /**
@@ -33,13 +35,20 @@ class NoteListFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val isLandscape = resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+        val gridColumnCount = if(isLandscape) 2 else 1
+
+        binding.rvNote.layoutManager = GridLayoutManager(context, gridColumnCount)
+        viewModel.noteList.observe(viewLifecycleOwner,
+            { list ->
+                binding.rvNote.adapter = NoteAdapter(list)
+            })
         binding.fabAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
         }
-//        binding.buttonFirst.setOnClickListener {
-//            findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
-//        Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
+//        binding.fabAddNote.setOnClickListener {
+//            viewModel.favouriteOnly = !viewModel.favouriteOnly
 //        }
     }
 

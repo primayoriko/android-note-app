@@ -55,7 +55,7 @@
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
     <style name="alert_dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="background">#FDF5AB</item>
+        <item name="background">@color/light_yellow</item>
         <item name="buttonBarPositiveButtonStyle">@style/btn_positive</item>
         <item name="buttonBarNegativeButtonStyle">@style/btn_negative</item>
     </style>

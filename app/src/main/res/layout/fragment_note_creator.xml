@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,91 +8,195 @@
     android:background="@color/background_primary"
     tools:context=".ui.note.NoteCreatorFragment">
 
-    <TextView
-        android:id="@+id/tvPageTitle"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="New Note"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/tv_page_title"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="60dp"
-        android:layout_marginLeft="30dp"
-        android:text="Title:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPageTitle"
-        style="@style/tv_content_title"/>
+        <TextView
+            android:id="@+id/tvPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="New Note"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/tv_page_title"/>
 
-    <EditText
-        android:id="@+id/etTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="250dp"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginVertical="50dp"
-        android:hint="Insert title here"
-        android:textColor="@color/color_primary_dark"
-        android:scaleX=".9"
-        android:scaleY=".9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvPageTitle" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="60dp"
+            android:layout_marginLeft="30dp"
+            android:text="Title:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPageTitle"
+            style="@style/tv_content_title"/>
 
-    <TextView
-        android:id="@+id/tvContent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="45dp"
-        android:layout_marginLeft="30dp"
-        android:text="Content:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        style="@style/tv_content_title" />
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="250dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="50dp"
+            android:hint="Insert title here"
+            android:textColor="@color/color_primary_dark"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvPageTitle" />
 
-    <EditText
-        android:id="@+id/etContent"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:minWidth="350dp"
-        android:gravity="top|left"
-        android:lines="10"
-        android:minLines="5"
-        android:maxLines="20"
-        android:hint="Insert content here"
-        android:textColor="@color/color_primary_dark"
-        android:scaleX=".9"
-        android:scaleY=".9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+        <TextView
+            android:id="@+id/tvNoteType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="45dp"
+            android:layout_marginLeft="30dp"
+            android:text="Type:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            style="@style/tv_content_title" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:text="Save"
-        android:backgroundTint="@color/green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContent" />
+        <RadioGroup
+            android:id="@+id/rgNoteType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="0.7"
+            android:checkedButton="@id/rNoteTypeWork"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteType">
 
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:backgroundTint="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+            <RadioButton
+                android:id="@+id/rNoteTypeWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Work"
+                android:textSize="14sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <RadioButton
+                android:id="@+id/rNoteTypeStudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Study"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rNoteTypeOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Other"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvIsFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="30dp"
+            android:text="Favourite:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgNoteType"
+            style="@style/tv_content_title" />
+
+        <RadioGroup
+            android:id="@+id/rgIsFavourite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="0.7"
+            android:checkedButton="@id/rYes"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIsFavourite">
+
+            <RadioButton
+                android:id="@+id/rYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Yes"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="No"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="30dp"
+            android:text="Content:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgIsFavourite"
+            style="@style/tv_content_title" />
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minWidth="350dp"
+            android:gravity="top|left"
+            android:lines="10"
+            android:minLines="5"
+            android:maxLines="20"
+            android:hint="Insert content here"
+            android:textColor="@color/color_primary_dark"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/green"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etContent" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:backgroundTint="@color/red"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

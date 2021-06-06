@@ -13,10 +13,15 @@ import java.util.*
 data class Note(
     val title: String,
     val content: String,
+    val type: NoteType,
+    var isFavourite: Boolean = false,
     val createdTime: Date = Calendar.getInstance().time,
-    var updatedTime: Date = Calendar.getInstance().time,
-    var isFavourite: Boolean = false
+    var updatedTime: Date = Calendar.getInstance().time
 ): Parcelable {
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null
+
+    enum class NoteType {
+        WORK, STUDY, OTHER
+    }
 }

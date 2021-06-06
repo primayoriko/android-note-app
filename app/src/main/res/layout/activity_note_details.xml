@@ -34,7 +34,7 @@
             android:layout_marginLeft="30dp"
             android:text="Title:     "
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgQuote" />
+            app:layout_constraintTop_toBottomOf="@+id/ivQuote" />
 
         <EditText
             android:id="@+id/etTitle"
@@ -49,7 +49,7 @@
             android:textColor="@color/color_primary_dark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvTitle"
-            app:layout_constraintTop_toBottomOf="@+id/imgQuote" />
+            app:layout_constraintTop_toBottomOf="@+id/ivQuote" />
 
         <TextView
             android:id="@+id/tvCreatedTime"
@@ -106,14 +106,110 @@
             app:layout_constraintTop_toBottomOf="@+id/etCreatedTime" />
 
         <TextView
-            android:id="@+id/tvContent"
+            android:id="@+id/tvNoteType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="45dp"
             android:layout_marginLeft="30dp"
-            android:text="Content:"
+            android:text="Type:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvUpdatedTime"
+            style="@style/tv_content_title" />
+
+        <RadioGroup
+            android:id="@+id/rgNoteType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="0.7"
+            android:checkedButton="@id/rNoteTypeWork"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteType">
+
+            <RadioButton
+                android:id="@+id/rNoteTypeWork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Work"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rNoteTypeStudy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Study"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rNoteTypeOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Other"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvIsFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="30dp"
+            android:text="Favourite:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgNoteType"
+            style="@style/tv_content_title" />
+
+        <RadioGroup
+            android:id="@+id/rgIsFavourite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_weight="0.7"
+            android:checkedButton="@id/rYes"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:scaleX=".9"
+            android:scaleY=".9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIsFavourite">
+
+            <RadioButton
+                android:id="@+id/rYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="Yes"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text="No"
+                android:textSize="14sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="30dp"
+            android:text="Content:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgIsFavourite"
             style="@style/tv_content_title" />
 
         <EditText
@@ -172,7 +268,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
         <ImageView
-            android:id="@+id/imgQuote"
+            android:id="@+id/ivQuote"
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:layout_marginVertical="30dp"

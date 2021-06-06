@@ -4,7 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     style="@style/item_note">
+
+    <ImageView
+        android:id="@+id/ivType"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/study_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/tvTitle"
@@ -16,37 +25,39 @@
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toStartOf="@+id/tvDate"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_weight=".4"
+        app:layout_constraintStart_toEndOf="@id/ivType"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvDate"
         style="@style/tv_content"
         android:layout_width="0dp"
-        android:maxWidth="80dp"
+        android:maxWidth="60dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Date"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_weight=".1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivType">
 
         <Button
             android:id="@+id/btnFavourite"
+            style="@style/btn_item_note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Favourite"
-            style="@style/btn_item_note"/>
+            android:text="Add Favourite" />
 
     </LinearLayout>
 

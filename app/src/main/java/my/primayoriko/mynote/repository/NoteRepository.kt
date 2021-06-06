@@ -6,5 +6,4 @@ import javax.inject.Inject
 class NoteRepository @Inject constructor(
     val noteDao: NoteDao
 ) {
-
 }

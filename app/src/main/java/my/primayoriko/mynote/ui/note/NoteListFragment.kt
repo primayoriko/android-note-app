@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import my.primayoriko.mynote.R
@@ -15,6 +16,7 @@ import my.primayoriko.mynote.databinding.FragmentNoteListBinding
  */
 class NoteListFragment: Fragment() {
 
+    private val viewModel: NoteViewModel by viewModels()
     private var _binding: FragmentNoteListBinding? = null
 
     // This property is only valid between onCreateView and

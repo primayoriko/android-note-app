@@ -7,5 +7,4 @@ import my.primayoriko.mynote.repository.NoteRepository
 class NoteViewModel @ViewModelInject constructor(
     val noteRepository: NoteRepository
 ): ViewModel() {
-
 }

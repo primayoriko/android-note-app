@@ -6,7 +6,7 @@
     android:id="@+id/activity_about"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundPrimary"
+    android:background="@color/background_primary"
     tools:context=".ui.about.AboutActivity">
 
     <TextView
@@ -16,10 +16,9 @@
         android:layout_marginTop="80dp"
         android:text="@string/title_about"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/page_title"/>
+        style="@style/tv_page_title"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,11 +26,10 @@
         android:layout_height="150dp"
         android:layout_marginTop="8dp"
         android:contentDescription="@string/iv_image_desc"
-        android:scaleX=".7"
-        android:scaleY=".7"
+        android:scaleX=".8"
+        android:scaleY=".8"
         android:src="@drawable/anonymous"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
@@ -43,27 +41,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        style="@style/page_sub_title" />
+        style="@style/tv_page_sub_title" />
 
     <TextView
         android:id="@+id/textView2"
-        style="@style/base_content_title_text"
+        style="@style/tv_content_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_city"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.314"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView3"
-        style="@style/base_content_text"
+        style="@style/tv_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
+        android:layout_marginRight="85dp"
         android:text="@string/tv_my_city"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 

@@ -8,4 +8,13 @@
     <string name="tv_my_city">Bekasi</string>
     <string name="tv_city">City:</string>
     <string name="iv_image_desc">image</string>
+    <string name="title_activity_note">NoteActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="note_list_fragment_label">Note List</string>
+    <string name="note_creator_fragment_label">Create Note</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

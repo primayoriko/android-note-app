@@ -1,48 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="main_title">
+    <!-- Text -->
+    <style name="tv_main_title">
         <item name="android:layout_marginVertical">40dp</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">35dp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <!--        <item name="android:textStyle"></item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
         <item name="textAllCaps">true</item>
     </style>
-    <style name="page_title">
+    <style name="tv_page_title">
         <item name="android:layout_marginVertical">40dp</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <!--        <item name="android:textStyle"></item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
-    <style name="page_sub_title">
+    <style name="tv_page_sub_title">
         <item name="android:layout_marginVertical">25dp</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">23sp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
-        <!--        <item name="android:textStyle"></item>-->
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
-    <style name="main_button">
+    <style name="tv_content_title">
+        <item name="android:layout_marginVertical">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+    </style>
+    <style name="tv_content">
+        <item name="android:layout_marginVertical">12dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
+    </style>
+    <!-- Button -->
+    <style name="btn_main_page">
         <item name="android:paddingHorizontal">40dp</item>
         <item name="android:paddingVertical">15dp</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:background">@color/colorPrimary</item>
-        <!--        <item name="android:textStyle"></item>-->
+        <item name="android:backgroundTint">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
-    <style name="base_content_title_text">
-        <item name="android:layout_marginVertical">15dp</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/colorPrimary</item>
-        <!--        <item name="android:textStyle"></item>-->
-        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    <style name="btn_item_note">
+        <item name="android:layout_marginVertical">5dp</item>
+        <item name="android:paddingHorizontal">40dp</item>
+        <item name="android:paddingVertical">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Small</item>
     </style>
-    <style name="base_content_text">
-        <item name="android:layout_marginVertical">15dp</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/colorPrimary</item>
-        <!--        <item name="android:textStyle"></item>-->
+    <!-- Other -->
+    <style name="item_note">
+        <item name="android:layout_marginHorizontal">15dp</item>
+        <item name="android:layout_marginVertical">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/background_item</item>
+        <item name="android:textColor">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
 </resources>

@@ -13,6 +13,7 @@ import my.primayoriko.mynote.R
 import my.primayoriko.mynote.adapter.NoteAdapter
 import my.primayoriko.mynote.databinding.FragmentNoteListBinding
 import my.primayoriko.mynote.domain.Note
+import my.primayoriko.mynote.domain.Note.NoteType
 import timber.log.Timber
 
 /**
@@ -49,14 +50,20 @@ class NoteListFragment: Fragment() {
 
         val note1 = Note(
             "uhuhu",
-            "qwerty123"
+            "qwerty123",
+            NoteType.STUDY
         )
         val note2 = Note(
-            "ahaha",
-            "shoot123"
+            "ahah sad sads sadas sadda",
+            "shoot123",
+            NoteType.WORK
         )
-
-        val myList: List<Note> = listOf(note1, note2)
+        val note3 = Note(
+            "qweqweqsadsadsadsadsa",
+            "7637 123830921 91283++",
+            NoteType.OTHER
+        )
+        val myList: List<Note> = listOf(note1, note2, note3)
         binding.rvNote.adapter = NoteAdapter(myList)
 //        viewModel.noteList.observe(viewLifecycleOwner,
 //            { list ->
@@ -67,7 +74,7 @@ class NoteListFragment: Fragment() {
         binding.fabAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
         }
-//        binding.fabAddNote.setOnClickListener {
+//        binding.btnViewMode.setOnClickListener {
 //            viewModel.favouriteOnly = !viewModel.favouriteOnly
 //        }
     }

@@ -13,6 +13,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.FragmentNoteCreatorBinding
 import my.primayoriko.mynote.domain.Note
+import my.primayoriko.mynote.domain.Note.NoteType
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -77,9 +78,18 @@ class NoteCreatorFragment: Fragment() {
     private fun saveNote() {
         val title: String = binding.etTitle.text.toString()
         val content: String = binding.etContent.text.toString()
+        val isFavourite = binding.rgIsFavourite.checkedRadioButtonId == binding.rYes.id
+        val noteType =
+            when (binding.rgNoteType.checkedRadioButtonId) {
+                binding.rNoteTypeStudy.id -> NoteType.STUDY
+                binding.rNoteTypeWork.id -> NoteType.WORK
+                else -> NoteType.OTHER
+            }
         val note = Note(
             title,
-            content
+            content,
+            noteType,
+            isFavourite
         )
         viewModel.insert(note)
     }

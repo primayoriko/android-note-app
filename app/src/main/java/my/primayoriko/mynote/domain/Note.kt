@@ -18,10 +18,12 @@ data class Note(
     val createdTime: Date = Calendar.getInstance().time,
     var updatedTime: Date = Calendar.getInstance().time
 ): Parcelable {
+
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null
 
     enum class NoteType {
         WORK, STUDY, OTHER
     }
+    
 }

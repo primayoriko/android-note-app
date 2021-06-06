@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.adapter.NoteAdapter
 import my.primayoriko.mynote.databinding.FragmentNoteListBinding
+import my.primayoriko.mynote.domain.Note
+import timber.log.Timber
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -29,21 +31,39 @@ class NoteListFragment: Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Timber.d("test0a")
         _binding = FragmentNoteListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Timber.d("test0b")
 
         val isLandscape = resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
         val gridColumnCount = if(isLandscape) 2 else 1
 
         binding.rvNote.layoutManager = GridLayoutManager(context, gridColumnCount)
-        viewModel.noteList.observe(viewLifecycleOwner,
-            { list ->
-                binding.rvNote.adapter = NoteAdapter(list)
-            })
+
+        Timber.d("test0c")
+
+        val note1 = Note(
+            "uhuhu",
+            "qwerty123"
+        )
+        val note2 = Note(
+            "ahaha",
+            "shoot123"
+        )
+
+        val myList: List<Note> = listOf(note1, note2)
+        binding.rvNote.adapter = NoteAdapter(myList)
+//        viewModel.noteList.observe(viewLifecycleOwner,
+//            { list ->
+//                Timber.d("testPost")
+//
+//                binding.rvNote.adapter = NoteAdapter(list)
+//            })
         binding.fabAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
         }

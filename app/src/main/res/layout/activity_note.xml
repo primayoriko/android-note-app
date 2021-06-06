@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/color_primary"
+            android:background="@color/color_primary"
             app:popupTheme="@style/Theme.MyNote.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

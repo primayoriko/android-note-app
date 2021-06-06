@@ -53,6 +53,7 @@ class NoteAdapter(private val noteList: List<Note>):
                         else -> R.drawable.other_icon
                     }
 
+                updateBtnFavourite()
                 Glide.with(view.context).load(imgId).into(binding.ivType)
                 view.setOnClickListener {
                     val intent = Intent(view.context, NoteDetailsActivity::class.java)

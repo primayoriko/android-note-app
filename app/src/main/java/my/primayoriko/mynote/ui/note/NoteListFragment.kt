@@ -74,6 +74,13 @@ class NoteListFragment: Fragment() {
         binding.fabAddNote.setOnClickListener {
             findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
         }
+        binding.rgViewMode.setOnCheckedChangeListener { _, id ->
+            if(id == binding.rAll.id) {
+                binding.rvNote.adapter = NoteAdapter(myList)
+            } else {
+                binding.rvNote.adapter = NoteAdapter(myList.filter { it.isFavourite })
+            }
+        }
 //        binding.btnViewMode.setOnClickListener {
 //            viewModel.favouriteOnly = !viewModel.favouriteOnly
 //        }

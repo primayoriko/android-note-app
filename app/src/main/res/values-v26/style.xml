@@ -5,34 +5,34 @@
         <item name="android:layout_marginVertical">40dp</item>
         <item name="android:textSize">35dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
         <item name="textAllCaps">true</item>
     </style>
     <style name="tv_page_title">
         <item name="android:layout_marginVertical">40dp</item>
         <item name="android:textSize">30sp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
     <style name="tv_page_sub_title">
         <item name="android:layout_marginVertical">25dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">23sp</item>
-        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
     <style name="tv_content_title">
         <item name="android:layout_marginVertical">12dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">17sp</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
     </style>
     <style name="tv_content">
         <item name="android:layout_marginVertical">12dp</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
     </style>
     <!-- Button -->
@@ -42,7 +42,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
     <style name="btn_item_note">
@@ -60,8 +60,8 @@
         <item name="android:layout_marginHorizontal">15dp</item>
         <item name="android:layout_marginVertical">5dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@color/backgroundPrimary</item>
-        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@color/background_primary</item>
+        <item name="android:textColor">@color/color_primary</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
 </resources>

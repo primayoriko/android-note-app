@@ -24,7 +24,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/color_primary"
         android:contentDescription="image"
         app:srcCompat="@drawable/ic_baseline_add_comment_24"
         app:tint="#B5E380"

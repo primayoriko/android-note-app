@@ -15,7 +15,6 @@ import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityNoteDetailsBinding
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.domain.Note.NoteType
-import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
 

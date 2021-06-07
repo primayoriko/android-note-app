@@ -13,9 +13,6 @@ import dagger.hilt.android.AndroidEntryPoint
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.adapter.NoteAdapter
 import my.primayoriko.mynote.databinding.FragmentNoteListBinding
-import my.primayoriko.mynote.domain.Note
-import my.primayoriko.mynote.domain.Note.NoteType
-import timber.log.Timber
 
 @AndroidEntryPoint
 class NoteListFragment : Fragment() {
@@ -50,7 +47,7 @@ class NoteListFragment : Fragment() {
             findNavController().navigate(R.id.action_NoteListFragment_to_NoteCreatorFragment)
         }
         binding.rgViewMode.setOnCheckedChangeListener { _, id ->
-            var noteList =
+            val noteList =
                 if(id == binding.rAll.id) viewModel.noteList.value
                 else viewModel.noteList.value?.filter { it.isFavourite }
             binding.rvNote.adapter =

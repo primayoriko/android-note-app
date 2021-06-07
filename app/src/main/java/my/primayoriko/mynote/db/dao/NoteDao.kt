@@ -1,6 +1,5 @@
 package my.primayoriko.mynote.db.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 import my.primayoriko.mynote.domain.Note

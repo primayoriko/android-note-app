@@ -1,6 +1,5 @@
 package my.primayoriko.mynote.domain
 
-import android.annotation.SuppressLint
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey

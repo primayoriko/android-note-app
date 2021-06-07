@@ -66,6 +66,10 @@
         <item name="android:background">@color/background_item</item>
         <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
     </style>
+    <style name="item_about_title" parent="tv_content_title"></style>
+    <style name="item_about_content" parent="tv_content">
+        <item name="android:gravity">center</item>
+    </style>
     <style name="alert_dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="android:gravity">center</item>
         <item name="background">@color/light_yellow</item>

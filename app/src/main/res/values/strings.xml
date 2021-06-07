@@ -5,6 +5,8 @@
     <string name="btn_text_main">Note List</string>
     <string name="btn_text_about">About</string>
     <string name="tv_my_name">Naufal Prima Yoriko</string>
+    <string name="tv_my_email">primayoriko@gmail.com</string>
+    <string name="tv_email">Email:</string>
     <string name="tv_my_city">Bekasi</string>
     <string name="tv_city">City:</string>
     <string name="iv_image_desc">image</string>

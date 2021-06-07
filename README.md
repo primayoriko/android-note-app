@@ -14,7 +14,7 @@ These are some requirement app(s) and device(s), that you probably will need, to
 2. JDK, this project using JDK v1.8 (JDK 8)
 3. Android SDK, this project using SDK version 30
 4. Kotlin, this project using Kotlin v1.5.10
-5. Gradle
+5. Gradle, this project using Gradle v7.x
 6. Android device or use AVD (Android Virtual Device)
 
 

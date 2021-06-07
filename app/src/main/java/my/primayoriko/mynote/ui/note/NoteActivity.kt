@@ -3,7 +3,6 @@ package my.primayoriko.mynote.ui.note
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -13,7 +12,6 @@ import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityNoteBinding
 import androidx.preference.PreferenceManager
 import my.primayoriko.mynote.constant.SeedData
-import timber.log.Timber
 
 @AndroidEntryPoint
 class NoteActivity : AppCompatActivity() {
@@ -48,10 +46,6 @@ class NoteActivity : AppCompatActivity() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         if (prefs.getBoolean("isFirstTime", true)) {
             viewModel.seedData(SeedData.seedList)
-            Timber.d("executed\n")
-            Timber.d("executed\n")
-            Timber.d("executed\n")
-            Timber.d("executed\n")
             val editor = prefs.edit()
             editor.putBoolean("isFirstTime", false)
             editor.apply()

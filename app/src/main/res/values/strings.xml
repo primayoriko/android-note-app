@@ -45,4 +45,5 @@
     <string name="radio_view_mode_all">All</string>
     <string name="radio_view_mode_favourite">Favourite Only</string>
     <string name="iv_content_desc">image</string>
+    <string name="btn_add_favourite">Add Favourite</string>
 </resources>

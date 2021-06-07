@@ -15,6 +15,7 @@ import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityNoteDetailsBinding
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.domain.Note.NoteType
+import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -115,8 +116,8 @@ class NoteDetailsActivity : AppCompatActivity() {
     }
 
     private fun updateNote() {
-        note.title = binding.tvTitle.text.toString()
-        note.content = binding.tvContent.text.toString()
+        note.title = binding.etTitle.text.toString()
+        note.content = binding.etContent.text.toString()
         note.updatedTime = Calendar.getInstance().time
         note.isFavourite = binding.rgIsFavourite.checkedRadioButtonId == binding.rYes.id
         note.type =

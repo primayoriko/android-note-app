@@ -41,25 +41,22 @@ class NoteViewModel @Inject constructor(
 
     fun get(id: Int): LiveData<Note> = noteRepository.getById(id)
 
-//    fun getAll(favouriteOnly: Boolean): LiveData<List<Note>> =
-//        if (favouriteOnly) noteRepository.getAllFavouriteSortedByUpdatedTime()
-//        else noteRepository.getAllSortedByUpdatedTime()
+    fun getAll(favouriteOnly: Boolean): LiveData<List<Note>> =
+        if (favouriteOnly) noteRepository.getAllFavouriteSortedByUpdatedTime()
+        else noteRepository.getAllSortedByUpdatedTime()
 
-    fun getAll(favouriteOnly: Boolean): LiveData<List<Note>> {
-        var x: LiveData<List<Note>>
-
-        Timber.d("test1")
-
-        if (favouriteOnly) {
-            x = noteRepository.getAllFavouriteSortedByUpdatedTime()
-            Timber.d("test2")
-        }
-        else {
-            x = noteRepository.getAllSortedByUpdatedTime()
-            Timber.d("test2")
-        }
-
-        return x
-    }
+//    fun getAll(favouriteOnly: Boolean): LiveData<List<Note>> {
+//        var x: LiveData<List<Note>>
+//        Timber.d("test1")
+//        if (favouriteOnly) {
+//            x = noteRepository.getAllFavouriteSortedByUpdatedTime()
+//            Timber.d("test2")
+//        }
+//        else {
+//            x = noteRepository.getAllSortedByUpdatedTime()
+//            Timber.d("test2")
+//        }
+//        return x
+//    }
 
 }

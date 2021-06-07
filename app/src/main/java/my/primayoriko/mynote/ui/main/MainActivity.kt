@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.setHomeButtonEnabled(false)
         supportActionBar?.setBackgroundDrawable(colorDrawable)
-//        actionBar?.setBackgroundDrawable(colorDrawable)
 
         binding.btnMain.setOnClickListener {
             val intent = Intent(view.context, NoteActivity::class.java)

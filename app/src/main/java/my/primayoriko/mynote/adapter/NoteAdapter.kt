@@ -1,11 +1,9 @@
 package my.primayoriko.mynote.adapter
 
 import android.content.Intent
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
@@ -15,8 +13,6 @@ import my.primayoriko.mynote.databinding.ItemNoteBinding
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.domain.Note.NoteType
 import my.primayoriko.mynote.ui.note.NoteDetailsActivity
-import my.primayoriko.mynote.util.Converter
-import timber.log.Timber
 import java.text.SimpleDateFormat
 
 class NoteAdapter(private val noteList: List<Note>) :

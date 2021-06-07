@@ -45,9 +45,8 @@ class NoteCreatorFragment : Fragment() {
                 .setIcon(R.drawable.ic_baseline_save_alt_24)
                 .setMessage("Save the new note?")
                 .setPositiveButton("Yes") { _, _ ->
-                    saveNote()
                     val toast = Toast.makeText(context, "Note data saved successfully", Toast.LENGTH_LONG)
-
+                    saveNote()
                     toast.setGravity(Gravity.CENTER, 0, 0)
                     toast.show()
                     findNavController()

@@ -11,9 +11,9 @@ import java.util.*
 @Entity(tableName = "note")
 @Parcelize
 data class Note(
-    val title: String,
-    val content: String,
-    val type: NoteType,
+    var title: String,
+    var content: String,
+    var type: NoteType,
     var isFavourite: Boolean = false,
     val createdTime: Date = Calendar.getInstance().time,
     var updatedTime: Date = Calendar.getInstance().time

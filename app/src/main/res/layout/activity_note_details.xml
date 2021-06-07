@@ -19,11 +19,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Note Details"
+            android:text="@string/title_note_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             style="@style/tv_page_title"/>
+
+        <TextView
+            android:id="@+id/tvQuoteOpening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            android:text="@string/tv_quote_opening"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPageTitle"
+            style="@style/tv_page_sub_title"/>
+
+        <ImageView
+            android:id="@+id/ivQuote"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginVertical="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvQuoteOpening"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -32,7 +56,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="45dp"
             android:layout_marginLeft="30dp"
-            android:text="Title:     "
+            android:layout_marginStart="30dp"
+            android:text="@string/tv_note_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivQuote" />
 
@@ -42,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="35dp"
-            android:hint="Insert title here"
+            android:hint="@string/et_note_title_hint"
             android:minWidth="250dp"
             android:scaleX=".9"
             android:scaleY=".9"
@@ -57,7 +82,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="50dp"
             android:layout_marginLeft="30dp"
-            android:text="Created:"
+            android:layout_marginStart="30dp"
+            android:text="@string/tv_created_time"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
             style="@style/tv_content_title"/>
@@ -69,7 +95,7 @@
             android:minWidth="250dp"
             android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="29dp"
-            android:hint="time"
+            android:hint="@string/et_time_hint"
             android:textColor="@color/color_primary_dark"
             android:scaleX=".9"
             android:scaleY=".9"
@@ -85,10 +111,11 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="50dp"
             android:layout_marginLeft="30dp"
-            android:text="Updated:"
+            android:layout_marginStart="30dp"
+            android:text="@string/tv_updated_time"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCreatedTime"
-            style="@style/tv_content_title"/>
+            style="@style/tv_content_title" />
 
         <EditText
             android:id="@+id/etUpdatedTime"
@@ -97,7 +124,7 @@
             android:minWidth="250dp"
             android:layout_marginHorizontal="5dp"
             android:layout_marginVertical="29dp"
-            android:hint="time"
+            android:hint="@string/et_time_hint"
             android:textColor="@color/color_primary_dark"
             android:scaleX=".9"
             android:scaleY=".9"
@@ -113,7 +140,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="45dp"
             android:layout_marginLeft="30dp"
-            android:text="Type:"
+            android:layout_marginStart="30dp"
+            android:text="@string/tv_note_type"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvUpdatedTime"
             style="@style/tv_content_title" />
@@ -137,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:text="Work"
+                android:text="@string/radio_note_type_work"
                 android:textSize="14sp" />
 
             <RadioButton
@@ -145,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:text="Study"
+                android:text="@string/radio_note_type_study"
                 android:textSize="14sp" />
 
             <RadioButton
@@ -153,7 +181,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:text="Other"
+                android:text="@string/radio_note_type_other"
                 android:textSize="14sp" />
 
         </RadioGroup>
@@ -164,7 +192,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="15dp"
             android:layout_marginLeft="30dp"
-            android:text="Favourite:"
+            android:layout_marginStart="30dp"
+            android:text="@string/tv_note_is_favourite"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rgNoteType"
             style="@style/tv_content_title" />
@@ -188,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:text="Yes"
+                android:text="@string/radio_is_favourite_yes"
                 android:textSize="14sp" />
 
             <RadioButton
@@ -196,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:text="No"
+                android:text="@string/radio_is_favourite_no"
                 android:textSize="14sp" />
 
         </RadioGroup>
@@ -207,7 +236,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="15dp"
             android:layout_marginLeft="30dp"
-            android:text="Content:"
+            android:layout_marginStart="30dp"
+            android:text="@string/tv_note_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rgIsFavourite"
             style="@style/tv_content_title" />
@@ -217,11 +247,11 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:minWidth="350dp"
-            android:gravity="top|left"
+            android:gravity="top|start"
             android:lines="10"
             android:minLines="5"
             android:maxLines="20"
-            android:hint="Insert content here"
+            android:hint="@string/et_note_content_hint"
             android:textColor="@color/color_primary_dark"
             android:scaleX=".9"
             android:scaleY=".9"
@@ -235,7 +265,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="30dp"
             android:backgroundTint="@color/red"
-            android:text="Delete"
+            android:text="@string/btn_delete"
             app:layout_constraintHorizontal_bias=".2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -248,7 +278,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="30dp"
             android:backgroundTint="@color/green"
-            android:text="Update"
+            android:text="@string/btn_update"
             app:layout_constraintHorizontal_bias=".8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -256,27 +286,17 @@
             app:layout_constraintTop_toBottomOf="@+id/etContent" />
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="50dp"
             android:backgroundTint="@color/dark_gray"
-            android:text="Back"
+            android:text="@string/btn_back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
-
-        <ImageView
-            android:id="@+id/ivQuote"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_marginVertical="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPageTitle"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

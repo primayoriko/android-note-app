@@ -90,17 +90,8 @@ class NoteDetailsActivity : AppCompatActivity() {
                 .create()
             dialog.show()
         }
-        binding.btnCancel.setOnClickListener {
-            val dialog = MaterialAlertDialogBuilder(view.context, R.style.alert_dialog)
-                .setTitle("Cancel")
-                .setIcon(R.drawable.ic_baseline_cancel_24)
-                .setMessage("Are you sure to cancel the creation of new note?")
-                .setPositiveButton("Yes") { _, _ ->
-                    navigateBack()
-                }
-                .setNegativeButton("No") { _, _ ->  }
-                .create()
-            dialog.show()
+        binding.btnBack.setOnClickListener {
+            navigateBack()
         }
     }
 

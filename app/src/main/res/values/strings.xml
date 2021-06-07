@@ -19,4 +19,30 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tv_quote_opening">Here is a quote specially made for you:</string>
+    <string name="title_note_details">Note Details</string>
+    <string name="tv_note_title">Title:</string>
+    <string name="et_note_title_hint">Insert title here</string>
+    <string name="tv_created_time">Created:</string>
+    <string name="et_time_hint">time</string>
+    <string name="tv_updated_time">Updated:</string>
+    <string name="tv_note_type">Type:</string>
+    <string name="tv_note_is_favourite">Favourite:</string>
+    <string name="et_note_content_hint">Insert content here</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_back">Back</string>
+    <string name="title_note_creator">New Note</string>
+    <string name="tv_note_content">Content:</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="radio_is_favourite_yes">Yes</string>
+    <string name="radio_is_favourite_no">No</string>
+    <string name="radio_note_type_other">Other</string>
+    <string name="radio_note_type_study">Study</string>
+    <string name="radio_note_type_work">Work</string>
+    <string name="tv_view_mode">View:</string>
+    <string name="radio_view_mode_all">All</string>
+    <string name="radio_view_mode_favourite">Favourite Only</string>
+    <string name="iv_content_desc">image</string>
 </resources>

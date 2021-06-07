@@ -19,7 +19,7 @@ import my.primayoriko.mynote.util.Converter
 import timber.log.Timber
 import java.text.SimpleDateFormat
 
-class NoteAdapter(private val noteList: List<Note>):
+class NoteAdapter(private val noteList: List<Note>) :
     RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_note, parent, false)
@@ -32,7 +32,7 @@ class NoteAdapter(private val noteList: List<Note>):
 
     override fun getItemCount(): Int = noteList.size
 
-    class NoteViewHolder(private val view: View):
+    class NoteViewHolder(private val view: View) :
         RecyclerView.ViewHolder(view) {
 
             private lateinit var note: Note

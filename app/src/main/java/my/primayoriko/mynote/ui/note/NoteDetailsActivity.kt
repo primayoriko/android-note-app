@@ -3,15 +3,21 @@ package my.primayoriko.mynote.ui.note
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
+import dagger.hilt.android.AndroidEntryPoint
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityNoteDetailsBinding
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.domain.Note.NoteType
 import java.text.SimpleDateFormat
 
+@AndroidEntryPoint
 class NoteDetailsActivity : AppCompatActivity() {
+
+    private val viewModel: NoteViewModel by viewModels()
 
     private lateinit var note: Note
     private lateinit var binding: ActivityNoteDetailsBinding

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.adapter.NoteAdapter
 import my.primayoriko.mynote.databinding.FragmentNoteListBinding
@@ -19,7 +20,8 @@ import timber.log.Timber
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class NoteListFragment: Fragment() {
+@AndroidEntryPoint
+class NoteListFragment : Fragment() {
 
     private val viewModel: NoteViewModel by viewModels()
     private var _binding: FragmentNoteListBinding? = null
@@ -77,8 +79,12 @@ class NoteListFragment: Fragment() {
         binding.rgViewMode.setOnCheckedChangeListener { _, id ->
             if(id == binding.rAll.id) {
                 binding.rvNote.adapter = NoteAdapter(myList)
+                val data = viewModel.getAll(false)
+                Timber.d(data.value.toString())
             } else {
                 binding.rvNote.adapter = NoteAdapter(myList.filter { it.isFavourite })
+                val data = viewModel.getAll(true)
+                Timber.d(data.value.toString())
             }
         }
 //        binding.btnViewMode.setOnClickListener {

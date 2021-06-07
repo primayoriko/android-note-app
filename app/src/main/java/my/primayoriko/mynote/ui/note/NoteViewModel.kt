@@ -4,14 +4,17 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.repository.NoteRepository
 import timber.log.Timber
+import javax.inject.Inject
 
-class NoteViewModel @ViewModelInject constructor(
+@HiltViewModel
+class NoteViewModel @Inject constructor(
     val noteRepository: NoteRepository
-): ViewModel() {
+) : ViewModel() {
 
     var noteList: LiveData<List<Note>> = getAll(false)
     var favouriteOnly: Boolean = false

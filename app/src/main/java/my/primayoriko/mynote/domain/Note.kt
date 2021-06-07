@@ -17,7 +17,7 @@ data class Note(
     var isFavourite: Boolean = false,
     val createdTime: Date = Calendar.getInstance().time,
     var updatedTime: Date = Calendar.getInstance().time
-): Parcelable {
+) : Parcelable {
 
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null

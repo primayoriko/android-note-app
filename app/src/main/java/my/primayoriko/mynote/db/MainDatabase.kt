@@ -12,7 +12,7 @@ import my.primayoriko.mynote.util.Converter
     version = 1
 )
 @TypeConverters(Converter::class)
-abstract class MainDatabase: RoomDatabase() {
+abstract class MainDatabase : RoomDatabase() {
 
     abstract fun getNoteDao(): NoteDao
 

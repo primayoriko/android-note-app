@@ -3,23 +3,21 @@ package my.primayoriko.mynote.ui.note
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.repository.NoteRepository
-import timber.log.Timber
+import javax.inject.Inject
 
-class NoteViewModel @ViewModelInject constructor(
+@HiltViewModel
+class NoteViewModel @Inject constructor(
     val noteRepository: NoteRepository
-): ViewModel() {
+) : ViewModel() {
 
-    var noteList: LiveData<List<Note>> = getAll(false)
-    var favouriteOnly: Boolean = false
-        get() = field
-        set(value) {
-            field = value
-            noteList = getAll(value)
-        }
+    var noteList: LiveData<List<Note>> =
+        noteRepository.getAllSortedByUpdatedTime(null).asLiveData()
 
     fun insert(note: Note) =
         viewModelScope.launch {
@@ -36,27 +34,9 @@ class NoteViewModel @ViewModelInject constructor(
             noteRepository.delete(note)
         }
 
-    fun get(id: Int): LiveData<Note> = noteRepository.getById(id)
+    fun get(id: Int): Note? = noteRepository.getById(id).asLiveData().value
 
-//    fun getAll(favouriteOnly: Boolean): LiveData<List<Note>> =
-//        if (favouriteOnly) noteRepository.getAllFavouriteSortedByUpdatedTime()
-//        else noteRepository.getAllSortedByUpdatedTime()
-
-    fun getAll(favouriteOnly: Boolean): LiveData<List<Note>> {
-        var x: LiveData<List<Note>>
-
-        Timber.d("test1")
-
-        if (favouriteOnly) {
-            x = noteRepository.getAllFavouriteSortedByUpdatedTime()
-            Timber.d("test2")
-        }
-        else {
-            x = noteRepository.getAllSortedByUpdatedTime()
-            Timber.d("test2")
-        }
-
-        return x
-    }
+    fun getAll(isFavourite: Boolean?): List<Note>? =
+        noteRepository.getAllSortedByUpdatedTime(isFavourite).asLiveData().value
 
 }

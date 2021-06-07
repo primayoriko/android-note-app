@@ -1,22 +1,16 @@
 package my.primayoriko.mynote.ui.main
 
 import android.content.Intent
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.View
-import androidx.navigation.findNavController
-import dagger.hilt.android.AndroidEntryPoint
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.ActivityMainBinding
 import my.primayoriko.mynote.ui.about.AboutActivity
 import my.primayoriko.mynote.ui.note.NoteActivity
-import android.graphics.drawable.ColorDrawable
-import androidx.core.content.ContextCompat
 
-
-@AndroidEntryPoint
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -34,7 +28,6 @@ class MainActivity: AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.setHomeButtonEnabled(false)
         supportActionBar?.setBackgroundDrawable(colorDrawable)
-//        actionBar?.setBackgroundDrawable(colorDrawable)
 
         binding.btnMain.setOnClickListener {
             val intent = Intent(view.context, NoteActivity::class.java)

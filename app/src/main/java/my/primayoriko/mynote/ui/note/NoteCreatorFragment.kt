@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import dagger.hilt.android.AndroidEntryPoint
 import my.primayoriko.mynote.R
 import my.primayoriko.mynote.databinding.FragmentNoteCreatorBinding
 import my.primayoriko.mynote.domain.Note
@@ -18,7 +19,8 @@ import my.primayoriko.mynote.domain.Note.NoteType
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class NoteCreatorFragment: Fragment() {
+@AndroidEntryPoint
+class NoteCreatorFragment : Fragment() {
 
     private val viewModel: NoteViewModel by viewModels()
     private var _binding: FragmentNoteCreatorBinding? = null
@@ -43,9 +45,8 @@ class NoteCreatorFragment: Fragment() {
                 .setIcon(R.drawable.ic_baseline_save_alt_24)
                 .setMessage("Save the new note?")
                 .setPositiveButton("Yes") { _, _ ->
-                    saveNote()
                     val toast = Toast.makeText(context, "Note data saved successfully", Toast.LENGTH_LONG)
-
+                    saveNote()
                     toast.setGravity(Gravity.CENTER, 0, 0)
                     toast.show()
                     findNavController()

@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
         android:layout_marginLeft="40dp"
-        android:text="Favourite:"
+        android:layout_marginStart="40dp"
+        android:text="@string/tv_view_mode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/tv_content_title" />
@@ -38,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="All"
+            android:text="@string/radio_view_mode_all"
             android:textSize="14sp" />
 
         <RadioButton
@@ -46,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:text="Favourite Only"
+            android:text="@string/radio_view_mode_favourite"
             android:textSize="14sp" />
 
     </RadioGroup>
@@ -68,9 +69,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/color_primary"
-        android:contentDescription="image"
+        android:contentDescription="@string/iv_content_desc"
         app:srcCompat="@drawable/ic_baseline_add_comment_24"
         app:tint="#B5E380"
         app:layout_constraintBottom_toBottomOf="parent"

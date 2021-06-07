@@ -76,4 +76,11 @@
         <item name="android:layout_marginVertical">32dp</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="alert_dialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/color_primary</item>
+        <item name="android:colorBackground">@color/color_primary</item>
+        <item name="buttonBarPositiveButtonStyle">@style/btn_positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/btn_negative</item>
+    </style>
 </resources>

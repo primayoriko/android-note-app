@@ -17,9 +17,6 @@ import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.domain.Note.NoteType
 import timber.log.Timber
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 @AndroidEntryPoint
 class NoteListFragment : Fragment() {
 

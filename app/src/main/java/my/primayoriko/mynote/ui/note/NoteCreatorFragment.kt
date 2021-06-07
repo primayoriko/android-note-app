@@ -16,9 +16,6 @@ import my.primayoriko.mynote.databinding.FragmentNoteCreatorBinding
 import my.primayoriko.mynote.domain.Note
 import my.primayoriko.mynote.domain.Note.NoteType
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
 @AndroidEntryPoint
 class NoteCreatorFragment : Fragment() {
 

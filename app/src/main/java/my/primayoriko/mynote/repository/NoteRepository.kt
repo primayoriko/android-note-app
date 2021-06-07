@@ -1,8 +1,5 @@
 package my.primayoriko.mynote.repository
 
-import androidx.lifecycle.LiveData
-import androidx.room.Delete
-import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 import my.primayoriko.mynote.db.dao.NoteDao
 import my.primayoriko.mynote.domain.Note

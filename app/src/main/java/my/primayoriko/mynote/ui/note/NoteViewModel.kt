@@ -1,6 +1,5 @@
 package my.primayoriko.mynote.ui.note
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
@@ -38,5 +37,11 @@ class NoteViewModel @Inject constructor(
 
     fun getAll(isFavourite: Boolean?): List<Note>? =
         noteRepository.getAllSortedByUpdatedTime(isFavourite).asLiveData().value
+
+    fun seedData(list: List<Note>) {
+        list.forEach {
+            insert(it)
+        }
+    }
 
 }

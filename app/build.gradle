@@ -93,6 +93,9 @@ dependencies {
     implementation "androidx.room:room-ktx:2.3.0"
     kapt "androidx.room:room-compiler:2.3.0"
 
+    // Preference
+    implementation "androidx.preference:preference-ktx:1.1.1"
+
     // Navigation Components
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
     implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
